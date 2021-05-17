@@ -5,7 +5,7 @@ export const router = {};
 /**
  * Changes the "page" (state) that your SPA app is currently set to
  */
-router.setState = function() {
+router.setState = function(state) {
   /**
    * - There are three states that your SPA app will have
    *    1. The home page
@@ -35,4 +35,23 @@ router.setState = function() {
    *    1. You may add as many helper functions in this file as you like
    *    2. You may modify the parameters of setState() as much as you like
    */
+  if (state=="setting") {
+    history.pushState({"page":1}, "setting", "#setting");
+    document.querySelector("body").style.backgroundColor = "gainsboro";
+    document.querySelector("header").style.backgroundColor = "gray";
+    document.querySelector("header h1").innerHTML= "Setting";
+    document.querySelector("main").style.display="none";
+  } else if (state=="entry") {
+    history.pushState({"page":2}, "entry", "#entry10");
+    document.querySelector("body").style.backgroundColor = "#efecca";
+    document.querySelector("header").style.backgroundColor = "#d9d281";
+    document.querySelector("header h1").innerHTML= "Setting";
+    document.querySelector("main").style.display="inline";
+  } else if (state=="default") {
+    history.pushState({"page":3}, "", "");
+    document.querySelector("body").style.backgroundColor = "#efecca";
+    document.querySelector("header").style.backgroundColor = "#d9d281";
+    document.querySelector("header h1").innerHTML= "Journal Entries";
+    document.querySelector("main").style.display="inline";
+  }
 }

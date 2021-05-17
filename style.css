@@ -2,12 +2,12 @@
 
 * {
   color: #3d3d3d;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 body {
   align-items: center;
-  background-color: #EFECCA;
+  background-color: #efecca;
   display: grid;
   justify-items: center;
   margin: 100px 0 0 0;
@@ -56,8 +56,8 @@ body.single-entry main {
 /* Single Entry CSS End */
 
 header {
-  background-color: #D9D281;
-  filter: drop-shadow(0 -5px 9px rgba(0,0,0,0.7));
+  background-color: #d9d281;
+  filter: drop-shadow(0 -5px 9px rgba(0, 0, 0, 0.7));
   margin: 0;
   position: fixed;
   text-align: center;
@@ -93,8 +93,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-
 
 /* Web Component Copy - Start Here */
 .entry {
@@ -138,5 +136,5 @@ ul {
 /* Web Component Copy - Stop Here */
 
 .post {
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
 }

@@ -16,3 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+
+window.onpopstate = function(event){
+  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  if (event.state.page == 1){
+    router.setState("setting");
+  } else if (event.state.page == 2){
+    router.setState("entry");
+  } else{
+    router.setState("default"); 
+  }
+};
+
+document.querySelector("img[src='settings.svg']").addEventListener('click', () => {
+  router.setState("setting");
+});
+
+
+const articles = Array.from(this.shadowRoot.querySelector(".entry"));
+
+articles.forEach(article => {
+  article.addEventListener('click', () => {
+    alert("HA");
+    router.setState("entry");
+  });
+});
+
+
+
